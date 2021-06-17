@@ -5,7 +5,6 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Products from './pages/Products';
 import Detail from './pages/Detail';
 
-
 const Stack = createStackNavigator();
 
 const Router = () => {
