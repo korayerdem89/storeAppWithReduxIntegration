@@ -1,11 +1,11 @@
 import React from 'react';
 import {SafeAreaView, Text} from 'react-native';
-import Config from 'react-native-config';
+import config from '../config';
 
 const Products = () => {
   return (
     <SafeAreaView>
-      <Text>Hi! {Config.API_URL}</Text>
+      <Text>Hi! {config.API_URL} </Text>
     </SafeAreaView>
   );
 };
