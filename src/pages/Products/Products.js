@@ -4,26 +4,10 @@ import config from '../config';
 import axios from 'axios';
 
 import ProductCard from '../../components/ProductCard';
+import useFetch from '../../hooks/useFetch';
 
 const Products = () => {
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      const {data: productData} = await axios.get(config.API_URL);
-      setData(productData);
-      setLoading(false);
-    } catch (err) {
-      setError(err.message);
-      setLoading(false);
-    }
-  };
+  const {loading, data, error} = useFetch(config.API_URL);
 
   const renderProduct = ({item}) => <ProductCard product={item} />;
 
@@ -36,9 +20,9 @@ const Products = () => {
       />
     );
   }
-if(error){
-  return <Text>Bir hata oluştu</Text>
-}
+  if (error) {
+    return <Text>Bir hata oluştu</Text>;
+  }
 
   return (
     <SafeAreaView>
