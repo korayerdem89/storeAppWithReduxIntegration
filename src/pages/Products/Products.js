@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
-import {SafeAreaView, FlatList, Text, ActivityIndicator} from 'react-native';
+import React from 'react';
+import {SafeAreaView, FlatList, Text} from 'react-native';
 import config from '../config';
-import axios from 'axios';
-
+import Loading from '../../components/Loading/Loading';
+import Error from '../../components/Error/Error';
 import ProductCard from '../../components/ProductCard';
 import useFetch from '../../hooks/useFetch';
 
@@ -12,16 +12,10 @@ const Products = () => {
   const renderProduct = ({item}) => <ProductCard product={item} />;
 
   if (loading) {
-    return (
-      <ActivityIndicator
-        size="large"
-        color="#0000ff"
-        style={{marginTop: 250}}
-      />
-    );
+    return <Loading />;
   }
   if (error) {
-    return <Text>Bir hata oluştu</Text>;
+    return <Error />;
   }
 
   return (
