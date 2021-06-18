@@ -12,7 +12,7 @@ const Router = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="ProductsPage" component={Products} />
-        <Stack.Screen name="DetailsPage" component={Detail} />
+        <Stack.Screen name="DetailPage" component={Detail} />
       </Stack.Navigator>
     </NavigationContainer>
   );
