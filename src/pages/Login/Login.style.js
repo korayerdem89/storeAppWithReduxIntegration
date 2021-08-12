@@ -10,6 +10,6 @@ export default StyleSheet.create({
     height: Dimensions.get('window').height / 3,
     width: Dimensions.get('window').width,
     resizeMode: 'contain',
-    alignSelf:'center',
+    alignSelf: 'center',
   },
 });
