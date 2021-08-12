@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import Products from './pages/Products';
 import Detail from './pages/Detail';
+import Login from './pages/Login';
 
 const Stack = createStackNavigator();
 
@@ -11,6 +12,13 @@ const Router = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="LoginPage"
+          component={Login}
+          options={{
+            headerShown: false,
+          }}
+        />
         <Stack.Screen
           name="ProductsPage"
           component={Products}
@@ -20,12 +28,14 @@ const Router = () => {
             headerTitleStyle: {color: 'white'},
           }}
         />
-        <Stack.Screen name="DetailPage" component={Detail} 
-           options={{
+        <Stack.Screen
+          name="DetailPage"
+          component={Detail}
+          options={{
             title: 'Detay',
             headerStyle: {backgroundColor: '#64b5f6'},
             headerTitleStyle: {color: 'white'},
-            headerTintColor: 'white'
+            headerTintColor: 'white',
           }}
         />
       </Stack.Navigator>
