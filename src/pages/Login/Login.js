@@ -1,20 +1,22 @@
 import React from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
+import {SafeAreaView, View, Image} from 'react-native';
 import TextInput from '../../components/Input';
 import Button from '../../components/Button';
 
 import styles from './Login.style';
+
 const Login = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.logo_container}>
-      <TextInput placeholder="Kullanıcı adı giriniz" />
-      <TextInput placeholder="Şifrenizi giriniz" />
-      <Button text="Giriş" />
-        <Text>Dükkan</Text>
+        <Image style={styles.logo} source={{
+          uri: 'https://reactnative.dev/img/tiny_logo.png',
+        }} />
       </View>
       <View style={styles.body_container}>
-        <Text>Dükkan</Text>
+        <TextInput placeholder="Kullanıcı adı giriniz" />
+        <TextInput placeholder="Şifrenizi giriniz" />
+        <Button text="Giriş" />
       </View>
     </SafeAreaView>
   );
