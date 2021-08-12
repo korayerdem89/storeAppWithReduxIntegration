@@ -9,9 +9,12 @@ const Login = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.logo_container}>
-        <Image style={styles.logo} source={{
-          uri: 'https://reactnative.dev/img/tiny_logo.png',
-        }} />
+      <Image
+          style={styles.logo}
+          source={{
+            uri: 'https://reactnative.dev/img/tiny_logo.png',
+          }}
+        />
       </View>
       <View style={styles.body_container}>
         <TextInput placeholder="Kullanıcı adı giriniz" />
