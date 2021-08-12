@@ -1,6 +1,7 @@
 import React from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
 import TextInput from '../../components/Input';
+import Button from '../../components/Button';
 
 import styles from './Login.style';
 const Login = () => {
@@ -9,6 +10,7 @@ const Login = () => {
       <View style={styles.logo_container}>
       <TextInput placeholder="Kullanıcı adı giriniz" />
       <TextInput placeholder="Şifrenizi giriniz" />
+      <Button text="Giriş" />
         <Text>Dükkan</Text>
       </View>
       <View style={styles.body_container}>
